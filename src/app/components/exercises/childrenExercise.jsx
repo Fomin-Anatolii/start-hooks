@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CollapseWrapper from "../common/collapse";
+
 const ChildrenExercise = () => {
     return (
         <CollapseWrapper title="Упражнение">
@@ -32,8 +33,8 @@ const ListComponent = ({ children }) => {
 ListComponent.propTypes = {
     children: PropTypes.arrayOf(PropTypes.node)
 };
-const Component = () => {
-    return <div>Компонент списка</div>;
+const Component = ({ index }) => {
+    return <div>Компонент списка №{index + 1}</div>;
 };
 Component.propTypes = {
     index: PropTypes.number
